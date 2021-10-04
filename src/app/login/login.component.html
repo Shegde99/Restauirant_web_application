@@ -1,0 +1,21 @@
+
+<h3>Login Here!!</h3><br/>
+<form  [formGroup]="loginForm" (ngSubmit)="login()">
+    <div class="mb-3">
+        <input type="email" class="form-control" formControlName="email" name="email" [(ngModel)]="user.email"
+            placeholder=" Email"  />
+            <span class="text-danger" *ngIf="loginForm.controls['email'].dirty && loginForm.hasError('required','email')">*Email is required</span>
+      </div>
+    
+  
+    <div class="mb-3">
+        <input type="password" class="form-control" name="password" formControlName="password" [(ngModel)]="user.password"
+            placeholder="Password"  />
+            <span class="text-danger" *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required','password')">*Password is required</span>
+    </div>
+   
+ 
+    <a class="btn btn-secondary" routerLink="/home">Go Back</a> |
+    <button type="submit" class="btn btn-success" [disabled]="!loginForm.valid">Login</button> <br/><br/>
+</form>
+<a routerLink="/register">New User? Click to signUp!!</a>

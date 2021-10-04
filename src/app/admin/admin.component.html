@@ -1,0 +1,22 @@
+<a routerLink='/admin-add' class="btn btn-outline-success">Add New Item</a>
+<br /><br />
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of itemList">
+            <td>{{ item.id }}</td>
+            <td>{{ item.title }}</td>
+            <td>{{ item.price}}</td>
+            <td>
+                <a [routerLink]="['/admin-details',item.id]" class="btn btn-dark">View Details</a>
+            </td>
+        </tr>
+    </tbody>
+</table>

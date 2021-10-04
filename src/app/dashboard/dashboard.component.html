@@ -1,0 +1,57 @@
+<div class="card-top container-fluid">
+<div class="container d-flex">
+   
+    <div class="item">
+      <a (click)="filter('')">
+         <img src="https://th.bing.com/th/id/OIP.piyUjrw85fB-buZOWffjjwHaEK?w=281&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7 " width="100px">
+         <h6>All Items</h6>
+     </a>
+    </div>
+
+    <div class="item ">
+        <a (click)="filter('Chats')">
+            <img src="https://th.bing.com/th/id/OIP.k-IjV58PrGA_tXWfq78YGAHaEo?w=289&h=183&c=7&r=0&o=5&dpr=1.5&pid=1.7 " width="100px">
+            <h6>Chats</h6>
+        </a>
+    </div>
+
+    <div class="item">
+        <a (click)="filter('South Indian')">
+            <img src="https://th.bing.com/th/id/OIP.HUKDrsARnL5tQBMGR1rQ4QHaC9?w=344&h=139&c=7&r=0&o=5&dpr=1.5&pid=1.7 " width="100px" height="63.5px">
+            <h6>South Indian</h6>
+        </a>
+    </div>
+
+    <div class="item">
+        <a (click)="filter('North Indian')">
+            <img src=" https://th.bing.com/th/id/OIP.F0wSkwfP1ODfH1-tLW9O4gHaD-?w=341&h=183&c=7&r=0&o=5&dpr=1.5&pid=1.7" width="100px" height="63.5px">
+            <h6>North Indian</h6>
+        </a>
+    </div>
+
+    <div class="item">
+        <a (click)="filter('Desserts')">
+            <img src="https://th.bing.com/th/id/OIP.5Hdq6VMMUjvLZHmeKmOFSwHaE8?w=203&h=135&c=7&r=0&o=5&dpr=1.5&pid=1.7 " width="100px" height="63.5px">
+            <h6>Desserts</h6>
+        </a>
+    </div>
+
+</div>
+</div>
+
+<div class="container">
+   <div class="row">
+       <ng-container *ngFor="let item of filterCategory | filter:searchKey:'title'">
+        <div class="card col-md-3">
+            <img style="height: 150px;" src="{{item.image}}">
+            <h5 style="text-align: center;">{{item.title}}</h5>
+            <p>{{item.description}}</p>
+            <p><strong>Price:</strong> Rs. {{item.price}}</p>
+            <button class="btn btn-dark" (click)="addtoCart(item)">Add to Cart</button>
+        </div>
+       </ng-container>  
+   </div>
+</div>
+
+
+

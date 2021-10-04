@@ -1,0 +1,38 @@
+<h3>Contact Us :)</h3><br/>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+        <img src="https://th.bing.com/th/id/OIP.YrSWKfivH1aX64HQ5LiJSgHaE8?w=296&h=198&c=7&r=0&o=5&dpr=1.5&pid=1.7">
+        </div>
+
+       <div class="col-md-5">
+        <form [formGroup]="contactForm" (ngSubmit)="addContact()">
+
+
+            <div class="mb-3">
+                <input type="text" class="form-control" formControlName="name" name="name" [(ngModel)]="visitor.name"
+                    placeholder="Name" required   />
+                    <span class="text-danger" *ngIf="contactForm.controls['name'].dirty && contactForm.hasError('required','name')">*name is required</span>
+            </div>
+        
+            <div class="mb-3">
+                <input type="email" class="form-control" formControlName="email"  name="email" [(ngModel)]="visitor.email"
+                    placeholder="Email here"  required />
+                    <span class="text-danger" *ngIf="contactForm.controls['email'].dirty && contactForm.hasError('required','email')">*Email is required</span>
+            </div>
+        
+            <div class="mb-3">
+                <input type="number" class="form-control" name="contact" formControlName="contact"  [(ngModel)]="visitor.contact"
+                    placeholder="Contact number"  required />
+                    <span class="text-danger" *ngIf="contactForm.controls['contact'].dirty && contactForm.hasError('required','contact')">*Contact is required</span>
+            </div>
+        
+           
+         
+            <a class="btn btn-secondary" routerLink="/home">Go Back</a> |
+            <button type="submit" class="btn btn-success" [disabled]="!contactForm.valid" >Send</button> <br/><br/>
+        </form>
+        </div>
+       </div>
+    </div>

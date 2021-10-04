@@ -1,0 +1,36 @@
+<div class="container">
+   <div class="row">
+       <h4>Make Your Payment Here!!</h4>
+        <form >
+            <div class="mb-3">
+                <input type="text" class="form-control" name="name"  placeholder="Name on the card" />
+            </div>
+            <div class="mb-3">
+                <textarea class="form-control" name="address" rows="4" placeholder="address"></textarea>
+            </div>
+            <div class="mb-3">
+                <input type="number" class="form-control" name="cardNo" 
+                    placeholder="0125 6780 4567 9909" />
+            </div>
+            <div class="mb-3">
+                <input type="text" class="form-control" name="expMonth" 
+                    placeholder="Exp Month" />
+            </div>
+            <div class="mb-3">
+                <input type="number" class="form-control" name="expYear" 
+                    placeholder="YY/MM" />
+            </div>
+            <div class="mb-3">
+                <input type="password" class="form-control" name="cvv" 
+                    placeholder="CVV" />
+            </div>
+
+            <div class="mb-3">
+                <p>Rs.{{grandTotal}}</p>
+            </div>
+            <button type="submit" (click)="payment()" class="btn btn-success">Confirm Order and Pay</button>
+        </form>
+     </div>
+</div>
+   
+

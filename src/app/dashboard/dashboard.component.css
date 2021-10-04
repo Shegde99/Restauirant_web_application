@@ -1,0 +1,32 @@
+.card-top
+{
+    background-clip: border-box;
+    border-radius: .25rem;
+    word-wrap: break-word;
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    min-width: 0;
+}
+.item 
+{
+    margin: 0px 15px;
+    text-align: center;
+}
+.item a:hover 
+{
+    color: blue;
+}
+.card img{
+margin-bottom: 20px;
+transition: 0.3s ease-in-out;
+}
+.card img:hover{
+    transition: 0.3s ease-in-out;
+    transform:scale(1.1); 
+}
+.card{
+    padding:30px;
+    margin:20px;
+    
+}

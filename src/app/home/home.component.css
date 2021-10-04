@@ -1,0 +1,17 @@
+h5{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:darkred;
+    text-align: center;
+}
+p{
+    font-size: 20px;
+    text-align: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.footer{
+    background: #292929;
+    color:white;
+}   
+img{
+    padding-left: 5px;
+}

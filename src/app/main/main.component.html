@@ -1,0 +1,83 @@
+
+  <header>
+    <div class="px-3 py-2 bg-dark text-white">
+      <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <img src="https://th.bing.com/th/id/OIP.ihmdFUsOYb-UXsWgZMaeMAHaHa?w=165&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" width="80" height="60">
+            <h3 style="padding-left: 20px;">Kitchen-Story</h3>
+          <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+            <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
+          </a>
+         
+          <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+            <li>
+              <a routerLink="home" class="nav-link text-secondary">
+                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#home"/></svg>
+                Home
+              </a>
+            </li>
+            <li>
+              <a routerLink="dashboard" class="nav-link text-white">
+                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#speedometer2"/></svg>
+                Dashboard
+              </a>
+            </li>
+            <li>
+              <a routerLink="admin" class="nav-link text-white">
+                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#grid"/></svg>
+                Admin 
+              </a>
+            </li>
+            <li>
+              <a routerLink="about" class="nav-link text-white">
+                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#people-circle"/></svg>
+                About
+              </a>
+            </li>
+            <li>
+                <a routerLink="contact"  class="nav-link text-white">
+                  <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#people-circle"/></svg>
+                  Contact
+                </a>
+              </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="px-3 py-2 border-bottom mb-3">
+      <div class="form-group container d-flex flex-wrap justify-content-center">
+        <form class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto">
+   
+          <input type="search" class="form-control" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="Search..." aria-label="Search">
+      
+        </form>
+
+
+        
+        
+      
+
+      <button routerLink="cart" class="btn btn-primary">
+        <span style="font-size:15px;" class="glyphicon glyphicon-shopping-cart"></span> 
+        <div style="font-size: 10px;" class="badge badge bg-dark">{{totalItem}}</div>
+      </button>  
+
+      
+        <div class="text-end" *ngIf="checkLoginStatus()">
+            <a  routerLink='login' class="btn btn-dark  me-2">Login</a>
+        </div> 
+
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container py-4">
+        <div class="p-5 mb-4 bg-light rounded-3">
+            <div class="container-fluid py-5">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</main>
+

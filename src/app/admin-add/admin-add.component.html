@@ -1,0 +1,27 @@
+<h3>Add New Item</h3>
+<br />
+<form>
+    <div class="mb-3">
+        <input type="text" class="form-control" name="title" [(ngModel)]="item.title" placeholder="Item Name" />
+    </div>
+    <div class="mb-3">
+        <input type="number" class="form-control" name="price" [(ngModel)]="item.price"
+            placeholder="Item Price" />
+    </div>
+    <div class="mb-3">
+        <input type="text" class="form-control" name="description" [(ngModel)]="item.description"
+            placeholder="Item Description" />
+    </div>
+
+    <div class="mb-3">
+        <input type="text" class="form-control" name="category" [(ngModel)]="item.category"
+            placeholder="Item Category" />
+</div>
+            <div class="mb-3">
+                <input type="text" class="form-control" name="image" [(ngModel)]="item.image"
+                    placeholder="Item Image" />
+    </div><br/><br/>
+
+    <a class="btn btn-secondary" routerLink="/admin">Go Back</a> |
+    <button type="submit" class="btn btn-success" (click)="addItem()">Add</button>
+</form>

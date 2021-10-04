@@ -1,0 +1,40 @@
+<div class="card">
+    <div class="card-header">
+        Details of <b>{{ item.title }}</b>
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <tbody>
+                <tr>
+                    <th>Item Id</th>
+                    <td>{{ item.id }}</td>
+                </tr>
+                <tr>
+                    <th>Item Id</th>
+                    <td>{{ item.title}}</td>
+                </tr>
+                <tr>
+                    <th>Item Price</th>
+                    <td>{{ item.price}}</td>
+                </tr>
+                <tr>
+                    <th>Item description</th>
+                    <td>{{ item.description }}</td>
+                </tr>
+                <tr>
+                    <th>Item Category</th>
+                    <td>{{ item.category }}</td>
+                </tr>
+                <tr>
+                    <th>Item Image</th>
+                    <td><img style="height: 150px;" src="{{item.image}}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="card-footer">
+        <a routerLink='/admin' class="btn btn-secondary">Go Back</a> |
+        <button (click)="removeItem()" class="btn btn-danger">Remove</button> 
+    </div>
+</div>
+
